@@ -1,6 +1,4 @@
-import 'dart:io';
-
-import 'package:design_pattern/flutter_factory_method.dart';
+import 'package:design_pattern/abstract_factory/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,27 +18,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: PlatformButton(Theme.of(context).platform).build(() {
-          print("Hello !!");
-        }, Text("Click")),
-      ),
     );
   }
 }
